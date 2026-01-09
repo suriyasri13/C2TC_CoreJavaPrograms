@@ -1,46 +1,42 @@
 package com.tnsif.oopsconcept;
 
+
+class Student {
+    
+    private String name;
+    private int age;
+
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+
 public class EncapsulationDemo {
 
-	    //instance variable
-		private String name;
-		private int age;
-		private int jersyNo;
-		private double height;
-		
-		
-		//getters and setters
-		public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public int getAge() {
-			return age;
-		}
-		public void setAge(int age) {
-			this.age = age;
-		}
-		public int getJersyNo() {
-			return jersyNo;
-		}
-		public void setJersyNo(int jersyNo) {
-			this.jersyNo = jersyNo;
-		}
-		
-		public double getHeight() {
-			return height;
-		}
-		public void setHeight(double d) {
-			this.height = d;
-		}
-		
-		@Override
-		public String toString() {
-			return "EncapsulationDemo [name=" + name + ", age=" + age + ", jersyNo=" + jersyNo + ",height="+height+"]";
-		}
+    public static void main(String[] args) {
 
-		
-		
+        Student s1 = new Student();
+        s1.setName("Rahul");
+        s1.setAge(21);
+
+        System.out.println("Name: " + s1.getName());
+        System.out.println("Age: " + s1.getAge());
+    }
 }
